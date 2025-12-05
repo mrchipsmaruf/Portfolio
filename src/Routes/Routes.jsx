@@ -6,9 +6,9 @@ import Projects from "../Pages/Home/Projects";
 import ProjectDetails from "../Pages/ProjectDetails/ProjectDetails";
 import About from "../Pages/Home/About";
 import Contact from "../Pages/Home/Contact";
-import Skills from "../Pages/Home/Skills";
 import Error404 from "../Pages/Error404";
 import Services from "../Components/Services";
+import Skills from "../Components/Skills";
 
 export const router = createBrowserRouter([
   {

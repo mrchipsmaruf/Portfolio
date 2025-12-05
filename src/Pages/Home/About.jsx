@@ -79,7 +79,7 @@ const AboutMe = () => {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {[
                                 { num: "30+", label: "Projects Completed" },
-                                { num: "300+", label: "Hours of Coding" },
+                                { num: "Advanced", label: "Coding Experience" },
                                 { num: "24/7", label: "Support" },
                             ].map((item, i) => (
                                 <div
