@@ -2,6 +2,7 @@ import React from "react";
 import bannerImage from "../assets/bannerImage.png";
 import { FaArrowAltCircleUp, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Banner = () => {
   return (
@@ -103,6 +104,14 @@ const Banner = () => {
                bg-white/20 backdrop-blur-md hover:bg-white/30 
                border border-white/30 transition duration-300 text-2xl">
               <FaGithub className="text-black dark:text-white" />
+            </Link>
+
+            <Link
+              to={"https://github.com/mrchipsmaruf"}
+              className="w-12 h-12 flex items-center justify-center rounded-full 
+               bg-white/20 backdrop-blur-md hover:bg-white/30 
+               border border-white/30 transition duration-300 text-2xl">
+              <FaSquareXTwitter className="text-black dark:text-white" />
             </Link>
 
             <Link
