@@ -8,6 +8,7 @@ import About from "../Pages/Home/About";
 import Contact from "../Pages/Home/Contact";
 import Skills from "../Pages/Home/Skills";
 import Error404 from "../Pages/Error404";
+import Services from "../Components/Services";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
         {
             path: "/skills",
             element: <Skills></Skills>
+        },
+        {
+            path: "/service",
+            element: <Services></Services>
         },
         {
             path: "*",
