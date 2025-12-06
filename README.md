@@ -1,16 +1,66 @@
-# React + Vite
+AL MARUF – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive, animation-rich developer portfolio built using React, Vite, TailwindCSS, GSAP, and Framer Motion.
+Built to highlight skills, showcase projects, and provide an elegant contact experience — all with smooth, lag-free animations.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚡ Ultra-smooth animations powered by GSAP & Framer Motion
 
-## React Compiler
+📱 Fully responsive on mobile, tablet, and desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚙️ Performance optimized with Vite
 
-## Expanding the ESLint configuration
+🧩 Clean & reusable component architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎯 Smart navbar with automatic section highlighting
+
+🎨 Beautiful UI with premium animations
+
+📬 Contact form powered by Formspree
+
+🌗 Dark/Light mode ready
+
+🖼️ Animated project cards & sections
+
+<br/>
+
+
+🛠️ Tech Stack
+<br/>
+Category	Tools
+<br/>
+Framework	React + Vite
+<br/>
+Styling	TailwindCSS
+<br/>
+Animations	GSAP, Framer Motion
+<br/>
+Forms	Formspree
+<br/>
+Icons	React Icons
+<br/>
+Deployment	Netlify
+<br/>
+
+
+🌐 Live Demo
+
+🔗 Portfolio Website:
+https://portfolio-of-almaruf.netlify.app/
+
+<br/>
+
+
+📩 Contact
+
+👤 MD AL MARUF
+📧 muhammad.almaruf001@gmail.com
+
+📍 Narayanganj, Dhaka, Bangladesh
+🔗 LinkedIn: https://linkedin.com/in/mrchipsmaruf
+<br/>
+
+⭐ Support
+
+If you like this portfolio, please consider giving the repository a star ⭐ on GitHub — it helps a lot and motivates future updates!
