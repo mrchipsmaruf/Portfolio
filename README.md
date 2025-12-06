@@ -32,6 +32,8 @@ Animations	GSAP, Framer Motion
 Forms	Formspree
 Icons	React Icons
 Deployment	Netlify
+
+
 🌐 Live Demo
 
 🔗 Portfolio Website:
