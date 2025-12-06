@@ -51,12 +51,12 @@ const ProjectDetails = () => {
     );
 
   return (
-    <div className="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 min-h-screen">
+    <div className="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
 
       {/* BACK BUTTON */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <Link
-          to="/#projects"
+          to="/?scroll=projects"
           className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
           <FaArrowLeft /> Back to Projects
         </Link>

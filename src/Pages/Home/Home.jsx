@@ -5,9 +5,26 @@ import Skills from '../../Components/Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Services from './Services';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const Home = () => {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const scrollTo = params.get("scroll");
+
+        if (scrollTo) {
+            setTimeout(() => {
+                const el = document.getElementById(scrollTo);
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        }
+    }, [location]);
+
     return (
         <div>
             <Banner />

@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 import {
     FaReact, FaJsSquare, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub,
     FaFigma, FaNpm, FaDocker
@@ -13,9 +17,36 @@ import { MdOutlineCode, MdDns, MdStorage, MdBuild } from "react-icons/md";
 import { TbApi } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
-const SkillsSection = () => {
+const Skills = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const cards = gsap.utils.toArray(".skill-card");
+        cards.forEach(c => (c.style.willChange = "opacity, transform"));
+
+        gsap.set(cards, {
+            opacity: 0,
+            y: 20,
+        });
+
+        // Smooth animation
+        gsap.to(cards, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power1.out",
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 85%",
+            }
+        });
+    }, []);
+
     return (
-        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background-light dark:bg-background-dark font-body">
+        <section
+            ref={containerRef}
+            className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background-light dark:bg-background-dark font-body">
 
             {/* Background Blobs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
@@ -44,7 +75,7 @@ const SkillsSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
                     {/* FRONTEND */}
-                    <div className="group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
+                    <div className="skill-card group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full group-hover:scale-110 transition-transform" />
 
                         <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mb-6 text-primary">
@@ -54,7 +85,6 @@ const SkillsSection = () => {
                         <h3 className="text-2xl font-bold mb-6">Frontend</h3>
 
                         <div className="flex flex-wrap gap-2">
-
                             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-base rounded-lg flex items-center gap-2">
                                 <FaReact color="#61DBFB" /> React.js
                             </span>
@@ -78,14 +108,14 @@ const SkillsSection = () => {
                     </div>
 
                     {/* BACKEND */}
-                    <div className="group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
+                    <div className="skill-card group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-purple-100 dark:bg-purple-900/10 rounded-bl-full group-hover:scale-110 transition-transform" />
 
                         <div className="w-14 h-14 bg-purple-50 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center mb-6 text-primary">
                             <MdDns className="text-4xl" />
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-6">Backend</h3>
+                        <h3 className="text-2x1 font-bold mb-6">Backend</h3>
 
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-base rounded-lg flex items-center gap-2">
@@ -107,7 +137,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* DATABASE */}
-                    <div className="group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
+                    <div className="skill-card group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-green-100 dark:bg-green-900/10 rounded-bl-full group-hover:scale-110 transition-transform" />
 
                         <div className="w-14 h-14 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center mb-6 text-primary">
@@ -117,7 +147,6 @@ const SkillsSection = () => {
                         <h3 className="text-2xl font-bold mb-6">Database</h3>
 
                         <div className="flex flex-wrap gap-2">
-
                             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-base rounded-lg flex items-center gap-2">
                                 <SiMongodb color="#47A248" /> MongoDB
                             </span>
@@ -137,7 +166,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* TOOLS */}
-                    <div className="group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
+                    <div className="skill-card group bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/30 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-orange-100 dark:bg-orange-900/10 rounded-bl-full group-hover:scale-110 transition-transform" />
 
                         <div className="w-14 h-14 bg-orange-50 dark:bg-orange-900/20 rounded-2xl flex items-center justify-center mb-6 text-primary">
@@ -147,7 +176,6 @@ const SkillsSection = () => {
                         <h3 className="text-2xl font-bold mb-6">Tools</h3>
 
                         <div className="flex flex-wrap gap-2">
-
                             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-base rounded-lg flex items-center gap-2">
                                 <FaGitAlt color="#F1502F" /> Git
                             </span>
@@ -191,15 +219,16 @@ const SkillsSection = () => {
                                 </div>
 
                                 <div className="w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center text-3xl">
-                                    <FaDocker  />
+                                    <FaDocker />
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
     );
 };
 
-export default SkillsSection;
+export default Skills;

@@ -1,9 +1,10 @@
-// Navbar.jsx
 import React, { useEffect, useState } from "react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -32,7 +33,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // run on mount
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -55,6 +56,8 @@ const Navbar = () => {
   const handleNavClick = (id) => (e) => {
     e.preventDefault();
 
+    setOpen(false);
+
     if (location.pathname === "/") {
       scrollToSecOnHome(id);
       return;
@@ -68,11 +71,16 @@ const Navbar = () => {
 
   const activeClass =
     "bg-primary text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-transform";
-  const normalClass = "text-gray-300 hover:text-white transition-colors";
+  const normalClass =
+    "text-black/70 hover:text-primary transition-colors";
 
   return (
-    <nav className="max-w-7xl mx-auto sticky top-0 z-50 bg-black dark:bg-zinc-900 rounded-full py-4 px-6 md:px-8 flex items-center justify-between shadow-lg ">
-      {/* Left Menu */}
+    <nav
+      className="max-w-7xl mx-auto sticky top-0 z-50
+        bg-white/30 backdrop-blur-md border border-white/40
+        rounded-full py-4 px-6 md:px-8 flex items-center justify-between shadow-lg">
+
+      {/* Desktop Left Menu */}
       <div className="hidden md:flex items-center gap-8">
         <NavLink
           className={active === "home" ? activeClass : normalClass}
@@ -101,16 +109,13 @@ const Navbar = () => {
 
       {/* Center Logo */}
       <div className="flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <span className="logo-text text-white font-bold text-lg tracking-wider">
+        <span className="logo-text text-black font-bold text-lg tracking-wider">
           AL MARUF
         </span>
       </div>
 
-      {/* Right Menu */}
+      {/* Desktop Right Menu */}
       <div className="hidden md:flex items-center gap-8">
-        <a className={normalClass} href="#">
-          Resume
-        </a>
 
         <NavLink
           className={active === "projects" ? activeClass : normalClass}
@@ -125,12 +130,64 @@ const Navbar = () => {
           onClick={handleNavClick("contact")}>
           Contact
         </NavLink>
+
+        <button className="btn btn-outline rounded-full flex items-center">
+          <a className={normalClass}
+             href="https://drive.google.com/file/d/185KbhYmCTlyqGeQqY1_i98F-zZlc5yXw/view?usp=drive_link">
+            Resume
+          </a>
+          <FaArrowUpRightFromSquare />
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      <button className="md:hidden text-white ml-auto">
-        <span className="material-icons">menu</span>
+      {/*  Mobile Menu Button */}
+      <button
+        className="md:hidden text-black/70 ml-auto text-3xl"
+        onClick={() => setOpen(!open)}>
+        {open ? "✕" : "☰"}
       </button>
+
+      {/* Mobile Dropdown Menu */}
+      {open && (
+        <div className="absolute top-[74px] right-4 left-4 bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg flex flex-col p-6 gap-6 md:hidden">
+
+          <a
+            onClick={handleNavClick("home")}
+            className={active === "home" ? activeClass : normalClass}>
+            Home
+          </a>
+
+          <a
+            onClick={handleNavClick("about")}
+            className={active === "about" ? activeClass : normalClass}>
+            About Me
+          </a>
+
+          <a
+            onClick={handleNavClick("services")}
+            className={active === "services" ? activeClass : normalClass}>
+            Services
+          </a>
+
+          <a
+            onClick={handleNavClick("projects")}
+            className={active === "projects" ? activeClass : normalClass}>
+            Projects
+          </a>
+
+          <a
+            onClick={handleNavClick("contact")}
+            className={active === "contact" ? activeClass : normalClass}>
+            Contact
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/185KbhYmCTlyqGeQqY1_i98F-zZlc5yXw/view?usp=drive_link"
+            className={normalClass}>
+            Resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 };
