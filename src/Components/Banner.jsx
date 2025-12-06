@@ -11,7 +11,7 @@ const Banner = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative max-w-7xl mx-auto pt-16 pb-24 md:pt-15 md:pb-0 flex flex-col items-center text-center">
+      className="relative max-w-7xl mx-auto pt-9 pb-24 md:pt-15 md:pb-0 flex flex-col items-center text-center">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -36,13 +36,13 @@ const Banner = () => {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.7 }}
-        className="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+        className="text-5xl md:text-7xl font-extrabold mb-1 md:mb-4 leading-tight">
         I'm <span className="text-primary">Al Maruf</span>,<br />
         MERN Stack Developer
       </motion.h1>
 
       {/* Center Grid */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 mt-12 items-end relative">
+      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 mt-0 md:mt-12 items-end relative">
 
         {/* Left Text */}
         <motion.div
@@ -137,34 +137,30 @@ const Banner = () => {
           <div className="flex gap-3">
             <Link
               to={"https://www.facebook.com/share/16tDHZTSXZ/"}
-              className="w-8= h-12 flex items-center justify-center rounded-full 
-               bg-white/20 backdrop-blur-md hover:bg-white/30 
-               border border-white/30 transition duration-300 text-2xl">
-              <FaFacebook className="text-blue-600" />
+              className="w-full h-full flex items-center justify-center rounded-full 
+                backdrop-blur-md transition duration-300 text-2xl">
+              <FaFacebook className="text-blue-600 dark:text-white" />
             </Link>
 
             <Link
               to={"https://github.com/mrchipsmaruf"}
-              className="w-8 h-12 flex items-center justify-center rounded-full 
-               bg-white/20 backdrop-blur-md hover:bg-white/30 
-               border border-white/30 transition duration-300 text-2xl">
+              className="w-full h-full flex items-center justify-center rounded-full 
+                backdrop-blur-md transition duration-300 text-2xl">
               <FaGithub className="text-black dark:text-white" />
             </Link>
 
             <Link
               to={"https://x.com/mrchips_maruf"}
-              className="w-8 h-12 flex items-center justify-center rounded-full 
-               bg-white/20 backdrop-blur-md hover:bg-white/30 
-               border border-white/30 transition duration-300 text-2xl">
+              className="w-full h-full flex items-center justify-center rounded-full 
+                backdrop-blur-md transition duration-300 text-2xl">
               <FaSquareXTwitter className="text-black dark:text-white" />
             </Link>
 
             <Link
               to={"https://www.linkedin.com/in/mrchipsmaruf/"}
-              className="w-8 h-12 flex items-center justify-center rounded-full 
-               bg-white/20 backdrop-blur-md hover:bg-white/30 
-               border border-white/30 transition duration-300 text-2xl">
-              <FaLinkedin className="text-blue-700" />
+              className="w-full h-full flex items-center justify-center rounded-full 
+                backdrop-blur-md transition duration-300 text-2xl">
+              <FaLinkedin className="text-blue-700 dark:text-white" />
             </Link>
           </div>
         </motion.div>

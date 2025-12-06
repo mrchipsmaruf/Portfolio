@@ -163,15 +163,14 @@ const Contact = () => {
                             {/* RIGHT SIDE FORM */}
                             <div
                                 className="col-span-12 lg:col-span-7 bg-background-light dark:bg-zinc-800 p-8 sm:p-12 lg:p-16"
-                                data-right
-                            >
+                                data-right>
                                 <form className="space-y-6" onSubmit={handleSubmit}>
                                     <h2 className="text-[25px] font-bold">Send Me a Message</h2>
 
                                     {/* Name + Email */}
                                     <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
                                         <label className="flex flex-col flex-1">
-                                            <p className="text-base font-medium pb-2 text-gray-900">Name</p>
+                                            <p className="text-base font-medium pb-2 text-gray-900 dark:text-white">Name</p>
                                             <input
                                                 type="text"
                                                 name="name"
@@ -181,7 +180,7 @@ const Contact = () => {
                                         </label>
 
                                         <label className="flex flex-col flex-1">
-                                            <p className="text-base font-medium pb-2 text-gray-900">Email</p>
+                                            <p className="text-base font-medium pb-2 text-gray-900 dark:text-white">Email</p>
                                             <input
                                                 type="email"
                                                 name="email"
@@ -194,7 +193,7 @@ const Contact = () => {
                                     {/* Subject */}
                                     <div>
                                         <label className="flex flex-col">
-                                            <p className="text-base font-medium pb-2 text-gray-900">Subject</p>
+                                            <p className="text-base font-medium pb-2 text-gray-900 dark:text-white">Subject</p>
                                             <input
                                                 type="text"
                                                 name="subject"
@@ -207,7 +206,7 @@ const Contact = () => {
                                     {/* Message */}
                                     <div>
                                         <label className="flex flex-col">
-                                            <p className="text-base font-medium pb-2 text-gray-900">Message</p>
+                                            <p className="text-base font-medium pb-2 text-gray-900 dark:text-white">Message</p>
                                             <textarea
                                                 name="message"
                                                 placeholder="Write your message here..."
@@ -218,7 +217,7 @@ const Contact = () => {
 
                                     {/* SUCCESS MESSAGE */}
                                     {success && (
-                                        <p className="text-green-600 font-semibold">
+                                        <p className="text-green-600 dark:text-blue-400 font-semibold">
                                             Your message sent successfully!
                                         </p>
                                     )}

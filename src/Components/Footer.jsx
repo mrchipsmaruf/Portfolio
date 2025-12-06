@@ -5,13 +5,13 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-surface-dark">
+    <footer className="bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
 
           {/* Brand */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <span className="logo-text text-black font-bold text-lg tracking-wider">AL MARUF</span>
+            <span className="logo-text text-black dark:text-white font-bold text-lg tracking-wider">AL MARUF</span>
             <p className="mt-4 max-w-sm text-gray-500 dark:text-gray-400">
               Let's build something amazing together. Ready to turn your ideas into reality?
             </p>

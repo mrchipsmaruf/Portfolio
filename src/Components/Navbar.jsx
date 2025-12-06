@@ -89,27 +89,27 @@ const Navbar = () => {
             e.preventDefault();
             handleNavClick("home")(e);
           }}>
-          Home
+          <span className="dark:text-white dark:hover:text-black">Home</span>
         </NavLink>
 
         <NavLink
           className={active === "about" ? activeClass : normalClass}
           to="/#about"
           onClick={handleNavClick("about")}>
-          About Me
+          <span className=" dark:text-white dark:hover:text-black">About Me</span>
         </NavLink>
 
         <NavLink
           className={active === "services" ? activeClass : normalClass}
           to="/#services"
           onClick={handleNavClick("services")}>
-          Services
+          <span className=" dark:text-white dark:hover:text-black">Services</span>
         </NavLink>
       </div>
 
       {/* Center Logo */}
       <div className="flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <span className="logo-text text-black font-bold text-lg tracking-wider">
+        <span className="logo-text  dark:text-white font-bold text-lg tracking-wider">
           AL MARUF
         </span>
       </div>
@@ -121,23 +121,24 @@ const Navbar = () => {
           className={active === "projects" ? activeClass : normalClass}
           to="/#projects"
           onClick={handleNavClick("projects")}>
-          Projects
+          <span className=" dark:text-white dark:hover:text-black">Projects</span>
         </NavLink>
 
         <NavLink
           className={active === "contact" ? activeClass : normalClass}
           to="/#contact"
           onClick={handleNavClick("contact")}>
-          Contact
+          <span className=" dark:text-white dark:hover:text-black">Contact</span>
         </NavLink>
 
         <button className="btn btn-outline rounded-full flex items-center">
           <a className={normalClass}
-             href="https://drive.google.com/file/d/185KbhYmCTlyqGeQqY1_i98F-zZlc5yXw/view?usp=drive_link">
-            Resume
+            href="https://drive.google.com/file/d/185KbhYmCTlyqGeQqY1_i98F-zZlc5yXw/view?usp=drive_link">
+            <span className=" dark:text-white">Resume</span>
           </a>
           <FaArrowUpRightFromSquare />
         </button>
+
       </div>
 
       {/*  Mobile Menu Button */}
@@ -149,43 +150,44 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {open && (
-        <div className="absolute top-[74px] right-4 left-4 bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl shadow-lg flex flex-col p-6 gap-6 md:hidden">
+        <div className="absolute top-[74px] right-4 left-4 dark:bg-black/90 bg-white/90 backdrop-blur-md border border-white/50 text-center rounded-2xl shadow-lg flex flex-col p-6 gap-6 md:hidden">
 
           <a
             onClick={handleNavClick("home")}
             className={active === "home" ? activeClass : normalClass}>
-            Home
+            <span className=" dark:text-white dark:hover:text-black">Home</span>
           </a>
 
           <a
             onClick={handleNavClick("about")}
             className={active === "about" ? activeClass : normalClass}>
-            About Me
+            <span className=" dark:text-white dark:hover:text-black">About Me</span>
           </a>
 
           <a
             onClick={handleNavClick("services")}
             className={active === "services" ? activeClass : normalClass}>
-            Services
+            <span className=" dark:text-white dark:hover:text-black">Services</span>
           </a>
 
           <a
             onClick={handleNavClick("projects")}
             className={active === "projects" ? activeClass : normalClass}>
-            Projects
+            <span className=" dark:text-white dark:hover:text-black">Projects</span>
           </a>
 
           <a
             onClick={handleNavClick("contact")}
             className={active === "contact" ? activeClass : normalClass}>
-            Contact
+            <span className=" dark:text-white dark:hover:text-black">Contact</span>
           </a>
 
           <a
             href="https://drive.google.com/file/d/185KbhYmCTlyqGeQqY1_i98F-zZlc5yXw/view?usp=drive_link"
             className={normalClass}>
-            Resume
+            <span className=" dark:text-white dark:hover:text-black">Resume</span>
           </a>
+
         </div>
       )}
     </nav>

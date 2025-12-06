@@ -5,10 +5,10 @@ import Footer from '../Components/Footer';
 
 const HomeLayout = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+            <Navbar />
+            <Outlet />
+            <Footer />
         </div>
     );
 };
