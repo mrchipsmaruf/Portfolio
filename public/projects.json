@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "PlateShare",
+    "description": "A modern food-sharing platform designed to connect people who want to share surplus food or request meals within their community.",
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+    "image": "https://i.ibb.co.com/HDxdgmxG/plate-Share.png",
+    "liveLink": "https://unique-mooncake-6c3cfc.netlify.app/",
+    "githubRepository": "https://github.com/mrchipsmaruf/PlateShare-Client.git"
+  },
+  {
+    "id": 2,
+    "title": "WarmPaws",
+    "description": "A fully responsive web app for booking vet appointments and exploring services.",
+    "technologies": ["React", "Firebase", "Express", "Tailwind CSS", "Stripe", "Framer Motion"],
+    "image": "https://i.ibb.co.com/pBRNpK67/warmPaws.png",
+    "liveLink": "https://radiant-concha-2d69fd.netlify.app/",
+    "githubRepository": "https://github.com/mrchipsmaruf/WarmPaws.git"
+  },
+  {
+    "id": 3,
+    "title": "Hero",
+    "description": "A clean and modern application focused on delivering simple and interactive UI experiences using React, Tailwind, and DaisyUI.",
+    "technologies": ["React", "Tailwind CSS", "DaisyUI"],
+    "image": "https://i.ibb.co.com/60v6jwfg/hero.png",
+    "liveLink": "https://incomparable-unicorn-3a095b.netlify.app/",
+    "githubRepository": "https://github.com/mrchipsmaruf/Assignment-8.git"
+  }
+]

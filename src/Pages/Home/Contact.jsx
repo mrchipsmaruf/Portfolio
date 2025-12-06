@@ -10,7 +10,7 @@ import { Link } from "react-router";
 
 const Contact = () => {
     return (
-        <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div className="relative flex h-auto w-full flex-col group/design-root overflow-x-hidden">
             <div className="layout-container flex h-full grow flex-col">
                 <div className="flex flex-1 justify-center py-10 lg:py-20 px-4 sm:px-6 lg:px-8">
                     <div className="layout-content-container flex flex-col max-w-6xl flex-1">
@@ -95,6 +95,7 @@ const Contact = () => {
                             <div className="col-span-12 lg:col-span-7 bg-background-light dark:bg-zinc-800 p-8 sm:p-12 lg:p-16">
                                 <form className="space-y-6" method="POST">
 
+                                    <h2 className="text-[25px] font-bold">Send Me a Message</h2>
                                     {/* Name + Email */}
                                     <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
                                         <label className="flex flex-col flex-1">

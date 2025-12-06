@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <section className="relative pt-16 pb-24 md:pt-15 md:pb-0 flex flex-col items-center text-center">
+    <section className="relative max-w-7xl mx-auto pt-16 pb-24 md:pt-15 md:pb-0 flex flex-col items-center text-center">
       <div className="relative mb-6">
         <div className="border border-gray-300 dark:border-gray-600 px-6 py-2 rounded-full bg-white dark:bg-zinc-800 shadow-sm relative z-10">
           <span className="font-bold text-gray-800 dark:text-gray-200">Hello!</span>
@@ -33,9 +33,9 @@ const Banner = () => {
 
         {/* Left Text */}
         <div className="md:col-span-3 text-left md:pl-8 hidden md:block mb-32">
-          <p className="text-xl text-gray-600 dark:text-gray-400 font-medium">
-            Exceptional product design<br />
-            for our website's success.<br />
+          <p className="text-[15px] text-gray-600 dark:text-gray-400 font-medium">
+            Exceptional full-stack <br />
+            development with MERN<br />
             Highly Recommended!
           </p>
         </div>
@@ -87,12 +87,12 @@ const Banner = () => {
 
         {/* Right Stats */}
         <div className="md:col-span-3 text-right md:pr-8 hidden md:flex flex-col items-end mb-32">
-          <h3 className="text-3xl font-bold mb-3">Connect with Me</h3>
+          <h3 className="text-[20px] font-bold">Connect with Me</h3>
 
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <Link
               to={""}
-              className="w-12 h-12 flex items-center justify-center rounded-full 
+              className="w-8= h-12 flex items-center justify-center rounded-full 
                bg-white/20 backdrop-blur-md hover:bg-white/30 
                border border-white/30 transition duration-300 text-2xl">
               <FaFacebook className="text-blue-600" />
@@ -100,7 +100,7 @@ const Banner = () => {
 
             <Link
               to={"https://github.com/mrchipsmaruf"}
-              className="w-12 h-12 flex items-center justify-center rounded-full 
+              className="w-8 h-12 flex items-center justify-center rounded-full 
                bg-white/20 backdrop-blur-md hover:bg-white/30 
                border border-white/30 transition duration-300 text-2xl">
               <FaGithub className="text-black dark:text-white" />
@@ -108,7 +108,7 @@ const Banner = () => {
 
             <Link
               to={"https://github.com/mrchipsmaruf"}
-              className="w-12 h-12 flex items-center justify-center rounded-full 
+              className="w-8 h-12 flex items-center justify-center rounded-full 
                bg-white/20 backdrop-blur-md hover:bg-white/30 
                border border-white/30 transition duration-300 text-2xl">
               <FaSquareXTwitter className="text-black dark:text-white" />
@@ -116,7 +116,7 @@ const Banner = () => {
 
             <Link
               to={""}
-              className="w-12 h-12 flex items-center justify-center rounded-full 
+              className="w-8 h-12 flex items-center justify-center rounded-full 
                bg-white/20 backdrop-blur-md hover:bg-white/30 
                border border-white/30 transition duration-300 text-2xl">
               <FaLinkedin className="text-blue-700" />

@@ -100,12 +100,12 @@ const AboutMe = () => {
                                 <span className="material-icons-outlined text-sm"><FaDownload /></span>
                             </Link>
 
-                            <Link to={"/contact"} className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 transform hover:-translate-y-0.5">
+                            <a href="#contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 transform hover:-translate-y-0.5">
                                 Contact Me
                                 <span className="material-icons-outlined">
                                     <FaArrowAltCircleUp className="text-[19px] p-[3px] rounded-full rotate-45" />
                                 </span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,14 +1,13 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Pages/Home/Home";
-import Experience from "../Pages/Home/Experience";
 import Projects from "../Pages/Home/Projects";
 import ProjectDetails from "../Pages/ProjectDetails/ProjectDetails";
 import About from "../Pages/Home/About";
 import Contact from "../Pages/Home/Contact";
 import Error404 from "../Pages/Error404";
-import Services from "../Components/Services";
-import Skills from "../Components/Skills";
+import Services from "../Pages/Home/Services";
+
 
 export const router = createBrowserRouter([
   {
@@ -20,32 +19,8 @@ export const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-            path: "/experience",
-            element: <Experience></Experience>
-        },
-        {
-            path: "/projects",
-            element: <Projects></Projects>
-        },
-        {
             path: "/projects/:id",
             element: <ProjectDetails></ProjectDetails>
-        },
-        {
-            path: "/about",
-            element: <About></About>
-        },
-        {
-            path: "/contact",
-            element: <Contact></Contact>
-        },
-        {
-            path: "/skills",
-            element: <Skills></Skills>
-        },
-        {
-            path: "/service",
-            element: <Services></Services>
         },
         {
             path: "*",
