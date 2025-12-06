@@ -1,16 +1,40 @@
-# React + Vite
+AL MARUF – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive, animation-rich developer portfolio built using React, Vite, TailwindCSS, GSAP, and Framer Motion.
+Designed to showcase skills, projects, and contact information with smooth, lag-free UI interactions.
 
-Currently, two official plugins are available:
+> Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✔ Ultra-smooth animations (GSAP + Framer Motion)
+✔ Beautiful responsive UI (Mobile, Tablet, Desktop)
+✔ Optimized for speed (Vite)
+✔ Reusable & clean component structure
+✔ Interactive navbar with auto-section detection
+✔ Animated project cards
+✔ Contact form integrated with Formspree
+✔ Dark/Light mode ready
 
-## React Compiler
+> Tech Stack
+Category	Tools
+Framework	React + Vite
+Styling	TailwindCSS
+Animations	GSAP, Framer Motion
+Forms	Formspree
+Icons	React Icons
+Deployment	Netlify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+> Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://portfolio-of-almaruf.netlify.app/
+
+
+> Contact
+
+ MD AL MARUF
+ muhammad.almaruf001@gmail.com
+ Narayanganj, Dhaka, Bangladesh
+ LinkedIn: https://linkedin.com/in/mrchipsmaruf
+
+> Support
+If you like this portfolio, consider giving the repo a star ⭐ on GitHub!
