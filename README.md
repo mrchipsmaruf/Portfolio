@@ -29,12 +29,19 @@ Built to highlight skills, showcase projects, and provide an elegant contact exp
 🛠️ Tech Stack
 <br/>
 Category	Tools
+<br/>
 Framework	React + Vite
+<br/>
 Styling	TailwindCSS
+<br/>
 Animations	GSAP, Framer Motion
+<br/>
 Forms	Formspree
+<br/>
 Icons	React Icons
+<br/>
 Deployment	Netlify
+<br/>
 
 
 🌐 Live Demo
@@ -42,7 +49,7 @@ Deployment	Netlify
 🔗 Portfolio Website:
 https://portfolio-of-almaruf.netlify.app/
 
-
+<br/>
 
 
 📩 Contact
@@ -52,7 +59,7 @@ https://portfolio-of-almaruf.netlify.app/
 
 📍 Narayanganj, Dhaka, Bangladesh
 🔗 LinkedIn: https://linkedin.com/in/mrchipsmaruf
-
+<br/>
 
 ⭐ Support
 
