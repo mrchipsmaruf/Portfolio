@@ -23,6 +23,7 @@ Built to highlight skills, showcase projects, and provide an elegant contact exp
 
 🖼️ Animated project cards & sections
 
+
 🛠️ Tech Stack
 Category	Tools
 Framework	React + Vite
@@ -36,6 +37,7 @@ Deployment	Netlify
 🔗 Portfolio Website:
 https://portfolio-of-almaruf.netlify.app/
 
+
 📩 Contact
 
 👤 MD AL MARUF
@@ -43,6 +45,7 @@ https://portfolio-of-almaruf.netlify.app/
 
 📍 Narayanganj, Dhaka, Bangladesh
 🔗 LinkedIn: https://linkedin.com/in/mrchipsmaruf
+
 
 ⭐ Support
 
