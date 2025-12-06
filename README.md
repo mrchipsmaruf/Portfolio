@@ -23,10 +23,11 @@ Built to highlight skills, showcase projects, and provide an elegant contact exp
 
 🖼️ Animated project cards & sections
 
-
+<br/>
 
 
 🛠️ Tech Stack
+<br/>
 Category	Tools
 Framework	React + Vite
 Styling	TailwindCSS
