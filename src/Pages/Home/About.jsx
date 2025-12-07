@@ -169,7 +169,7 @@ const AboutMe = () => {
                             <motion.a
                                 whileHover={{ scale: 1.06 }}
                                 whileTap={{ scale: 0.96 }}
-                                href="/public/resume_of_almaruf.pdf"
+                                href="/resume_of_almaruf.pdf"
                                 download
                                 className="inline-flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-8 py-3.5 rounded-full font-semibold shadow-lg hover:shadow-primary/50 hover:bg-primary-dark transition-all">
                                 Download Resume
