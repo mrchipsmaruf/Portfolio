@@ -104,7 +104,7 @@ const AboutMe = () => {
                                     <span className="material-icons-outlined text-2xl">EXPERIENCED</span>
                                 </div>
                                 <div>
-                                    <p className="text-xs text-gray-400 dark:text-gray-300 uppercase tracking-wide">
+                                    <p className="text-xs text-gray-800 dark:text-gray-300 uppercase tracking-wide">
                                         Aspiring
                                     </p>
                                     <p className="text-lg font-bold text-gray-900 dark:text-white">
@@ -169,7 +169,7 @@ const AboutMe = () => {
                             <motion.a
                                 whileHover={{ scale: 1.06 }}
                                 whileTap={{ scale: 0.96 }}
-                                href="/public/RESUME of Al Maruf.pdf"
+                                href="/public/resume_of_almaruf.pdf"
                                 download
                                 className="inline-flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-8 py-3.5 rounded-full font-semibold shadow-lg hover:shadow-primary/50 hover:bg-primary-dark transition-all">
                                 Download Resume
