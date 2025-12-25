@@ -5,7 +5,7 @@ const Loading = () => {
     <div className="flex items-center justify-center min-h-screen dark:bg-background-dark font-display">
       <div className="relative overflow-hidden">
         {/* TEXT */}
-        <h1 className="logo-text text-6xl md:text-7xl px-2 font-semibold tracking-wide">
+        <h1 className="logo-text text-2xl md:text-7xl px-2 font-semibold tracking-wide">
           AL MARUF
         </h1>
 
