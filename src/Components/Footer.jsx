@@ -15,11 +15,11 @@ const Footer = () => {
             <p className="mt-4 max-w-sm text-gray-500 dark:text-gray-400">
               Let's build something amazing together. Ready to turn your ideas into reality?
             </p>
-            <a
-              href="#contact"
+            <Link
+               to="/#contact"
               className="mt-6 inline-block rounded-lg bg-primary px-5 py-3 font-medium text-white transition hover:bg-primary/90 focus:outline-none focus:ring focus:ring-purple-300 dark:focus:ring-purple-800">
               Get in Touch
-            </a>
+            </Link>
           </div>
 
           {/* Links */}
