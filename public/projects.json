@@ -8,7 +8,7 @@
     "Express",
     "MongoDB",
     "Stripe",
-    "Framer-Motion",
+    "Framer Motion",
     "Firebase",
     "JWT",
     "Tailwind CSS"
@@ -42,7 +42,6 @@
     "Firebase",
     "Express",
     "Tailwind CSS",
-    "Stripe",
     "Framer Motion"
   ],
   "image": "https://i.ibb.co.com/RTGmjB15/Screenshot-2025-12-25-121411.png",
