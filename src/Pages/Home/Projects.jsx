@@ -129,7 +129,7 @@ const Projects = () => {
                                 {/* Buttons */}
                                 <div className="mt-auto pt-6 flex items-center justify-between">
                                     <div className="flex btn btn-primary items-center gap-2">
-                                        <a href={project.liveLink} target="_blank">
+                                        <a href={project.liveLink}>
                                             Live Demo
                                         </a>
                                         <FaArrowUpRightFromSquare />
@@ -137,12 +137,10 @@ const Projects = () => {
 
                                     <div className="flex items-center gap-2">
                                         <Link
-                                            className="project-link"
-                                            to={`/projects/${project.id}`}
-                                            target="_blank">
-                                            Details
+                                            className="project-link flex items-center gap-3"
+                                            to={`/projects/${project.id}`}>
+                                            Details <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                                         </Link>
-                                        <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                                     </div>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-16 pb-7 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
 
           {/* Brand */}
@@ -16,7 +16,7 @@ const Footer = () => {
               Let's build something amazing together. Ready to turn your ideas into reality?
             </p>
             <Link
-               to="/#contact"
+               to="/?scroll=contact"
               className="mt-6 inline-block rounded-lg bg-primary px-5 py-3 font-medium text-white transition hover:bg-primary/90 focus:outline-none focus:ring focus:ring-purple-300 dark:focus:ring-purple-800">
               Get in Touch
             </Link>
