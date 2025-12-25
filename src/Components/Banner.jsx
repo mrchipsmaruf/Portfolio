@@ -5,16 +5,6 @@ import { Link } from "react-router";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { motion, useAnimation } from "framer-motion";
 
-// Premium, production-ready Banner. Preserves original structure while adding:
-// - hardware-accelerated layers and will-change hints
-// - reduced-motion support
-// - accessible ARIA and keyboard focus for interactive elements
-// - pointer-driven parallax + tilt
-// - performant canvas particle system (tiny, device-friendly)
-// - improved motion orchestration with Framer Motion controllers
-// - image lazy-loading and responsive srcSet
-// - subtle lighting & vignette layers
-// - polished micro-interactions on hover & focus
 
 const Banner = () => {
   const containerRef = useRef(null);
@@ -39,7 +29,6 @@ const Banner = () => {
     controls.start({ opacity: 1, y: 0, scale: 1, transition: { duration: 1.2, ease: "easeOut" } });
   }, [controls, prefersReducedMotion]);
 
-  // Pointer parallax + subtle tilt
   useEffect(() => {
     const el = containerRef.current;
     if (!el || prefersReducedMotion) return;
@@ -62,7 +51,6 @@ const Banner = () => {
     };
   }, [prefersReducedMotion]);
 
-  // Tiny canvas particle system for ambient depth. Optimized: low-res on mobile, capped particles.
   useEffect(() => {
     const canvas = particlesRef.current;
     if (!canvas || prefersReducedMotion) return;
@@ -117,7 +105,6 @@ const Banner = () => {
     };
   }, [prefersReducedMotion]);
 
-  // Utility: small accessible focus ring for links
   const focusClass = "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/60";
 
   return (
@@ -129,12 +116,10 @@ const Banner = () => {
       aria-label="Hero banner - Al Maruf"
       className={`relative overflow-hidden w-full mx-auto pt-9 pb-24 md:pt-15 md:pb-0 flex flex-col items-center text-center will-change-transform `}>
       <div className="max-w-7xl mx-auto">
-        {/* GPU-accelerated canvas background for particles */}
         <div className="pointer-events-none absolute inset-0 -z-30" aria-hidden>
           <canvas ref={particlesRef} className="w-full h-full block" />
         </div>
 
-        {/* Neon Aura (keeps original size/placement) */}
         <motion.div
           aria-hidden
           animate={prefersReducedMotion ? {} : { scale: [1, 1.28, 1], opacity: [0.28, 0.95, 0.28] }}
@@ -142,7 +127,6 @@ const Banner = () => {
           className="absolute w-[800px] h-[800px] bg-primary/25 blur-[180px] rounded-full top-20 left-1/2 -translate-x-1/2 -z-10 will-change-transform"
         />
 
-        {/* Hello Badge (preserved) */}
         <motion.div
           initial={{ opacity: 0, y: -30, rotate: -8, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
@@ -157,7 +141,6 @@ const Banner = () => {
             <span className="font-bold text-gray-800 dark:text-black">Hello!</span>
           </motion.div>
 
-          {/* Glow Line Drawing (subtle stroke animation) */}
           <motion.svg
             initial={{ opacity: 0, pathLength: 0 }}
             animate={{ opacity: 1, pathLength: 1 }}
@@ -185,7 +168,7 @@ const Banner = () => {
           MERN Stack Developer
         </motion.h1>
 
-        {/* Layout Grid (preserves original columns and layout) */}
+        {/* Layout Grid */}
         <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 mt-0 md:mt-12 items-end relative">
 
           {/* Left text */}
@@ -210,7 +193,6 @@ const Banner = () => {
             className="md:col-span-6 flex flex-col items-center relative z-10"
           >
 
-            {/* Premium Glow Circle (keeps original visual but with ray overlay & subtle chromatic shift) */}
             <motion.div
               aria-hidden
               animate={prefersReducedMotion ? {} : { scale: [1, 1.08, 1], rotateY: [0, 12, 0], rotateZ: [0, 2, -2, 0], opacity: [0.6, 0.95, 0.6] }}
@@ -221,7 +203,6 @@ const Banner = () => {
                        blur-[30px] shadow-[0_0_150px_rgba(168,85,247,0.55)] will-change-transform"
             />
 
-            {/* Floating Main Image (preserved layout) */}
             <motion.div
               animate={prefersReducedMotion ? {} : { y: [0, -25, 0], rotateX: [0, 5, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -234,9 +215,11 @@ const Banner = () => {
                          overflow-hidden rounded-[2.5rem] 
                          mx-auto relative will-change-transform"
                 style={{
-                  transform: `perspective(1200px) translateZ(0) rotateX(calc(var(--pointer-y,0)*6deg)) rotateY(calc(var(--pointer-x,0)*10deg))`,
-                  WebkitTransform: `perspective(1200px) translateZ(0) rotateX(calc(var(--pointer-y,0)*6deg)) rotateY(calc(var(--pointer-x,0)*10deg))`,
+                  transform: prefersReducedMotion
+                    ? "none"
+                    : "perspective(1200px) translateZ(0)",
                 }}
+
               >
                 <img
                   src={bannerImage}
