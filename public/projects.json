@@ -40,6 +40,7 @@
   "technologies": [
     "React",
     "Firebase",
+    "Node.js",
     "Express",
     "Tailwind CSS",
     "Framer Motion"
