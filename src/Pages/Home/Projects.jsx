@@ -30,11 +30,15 @@ const techIcons = {
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     const cardRefs = useRef([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("/projects.json")
             .then((res) => res.json())
-            .then((data) => setProjects(data));
+            .then((data) => {
+                setProjects(data);
+                setLoading(false);
+            });
     }, []);
 
     // GSAP Entry Animation
@@ -54,7 +58,7 @@ const Projects = () => {
                     delay: i * 0.12,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%",
+                        start: "top 90%",
                         once: true,
                     },
                 }
@@ -79,7 +83,76 @@ const Projects = () => {
                 {/* Grid */}
                 <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-                    {projects.map((project, index) => (
+                    {loading && (
+                        <div className="col-span-full flex justify-center items-center">
+                            <div className="flex items-center justify-center min-h-[260px] py-12 font-display overflow-visible">
+                                <div className="relative overflow-visible">
+                                    {/* TEXT */}
+                                    <h1 className="logo-text text-2xl md:text-7xl px-4 font-semibold tracking-wide leading-[1.3]">
+                                        Loading Projects
+                                    </h1>
+
+                                    {/* LIGHT REVEAL */}
+                                    <div className="absolute inset-0 pointer-events-none">
+                                        <div className="reveal-layer"></div>
+                                    </div>
+                                </div>
+
+                                {/* STYLES */}
+                                <style>
+                                    {`
+          .logo-text {
+            background: linear-gradient(
+              90deg,
+              #6d28d9,
+              #8b5cf6,
+              #c4b5fd,
+              #8b5cf6,
+              #6d28d9
+            );
+            background-size: 300% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: text-flow 4s ease-in-out infinite,
+                       glow 5s ease-in-out infinite;
+          }
+
+          @keyframes text-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+          }
+
+          .reveal-layer {
+            position: absolute;
+            top: 0;
+            left: -140%;
+            width: 140%;
+            height: 100%;
+            background: linear-gradient(
+              120deg,
+              transparent 0%,
+              rgba(255,255,255,0.15) 45%,
+              rgba(255,255,255,0.6) 50%,
+              rgba(255,255,255,0.15) 55%,
+              transparent 100%
+            );
+            mix-blend-mode: screen;
+            animation: reveal-sweep 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+          }
+
+          @keyframes reveal-sweep {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(280%); }
+          }
+        `}
+                                </style>
+                            </div>
+                        </div>
+                    )}
+
+
+                    {!loading && projects.map((project, index) => (
                         <motion.div
                             key={project.id}
                             ref={(el) => (cardRefs.current[index] = el)}
